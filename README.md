@@ -42,6 +42,16 @@ Der zweite Teil soll eine Methode zum Hinzufügen einer Zeitreihe
 Es soll nach TDD vorgegangen werden. Schreibe eine eigene Klasse (mit
 entsprechenden Test-Methoden) für den Test.
 
+### Tipp
+
+Die Klasse `Station` nutzt die JTS-Bibliothek zur Speicherung des `Point`. Ein
+`Point`-Objekt kann wie folgt erstellt werden:
+
+```java
+GeometryFactory gf = new GeometryFactory();
+Point point = gf.createPoint(new Coordinate(12.0, 20.0));
+```
+
 ### Veröffentlichung
 
 Committe und Pushe Deine Ergebnisse in deinen GitHub-Fork
