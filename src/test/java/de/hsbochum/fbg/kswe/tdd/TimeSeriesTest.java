@@ -19,7 +19,7 @@ public class TimeSeriesTest {
         ts.addObservation(new Observation(12.4, new DateTime("2017-06-06T12:30:00+01:00")));
         ts.addObservation(new Observation(14.4, new DateTime("2017-06-06T13:00:00+01:00")));
         
-        Assert.assertThat(ts.calculateMean(), CoreMatchers.is(13f));
+        Assert.assertThat(ts.calculateMean(), CoreMatchers.is(13.0));
     }
     
 
