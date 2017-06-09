@@ -15,12 +15,11 @@ public class TimeSeriesTest {
     @Test
     public void testStatistics() {
         TimeSeries ts = new TimeSeries("waterGauge");
-        ts.addObservation(new Observation(12.2, new DateTime("2017-06-06T12:00:00+01:00")));
-        ts.addObservation(new Observation(12.4, new DateTime("2017-06-06T12:30:00+01:00")));
-        ts.addObservation(new Observation(14.4, new DateTime("2017-06-06T13:00:00+01:00")));
+        ts.addObservation(new Observation(12.2, new DateTime("2017-06-06T12:00:00+01:00"), "m"));
+        ts.addObservation(new Observation(1240, new DateTime("2017-06-06T12:30:00+01:00"), "cm"));
+        ts.addObservation(new Observation(14400, new DateTime("2017-06-06T13:00:00+01:00"), "mm"));
         
-        Assert.assertThat(ts.calculateMean(), CoreMatchers.is(13.0));
+        Assert.assertThat(ts.calculateMean("cm"), CoreMatchers.is(1300.0));
     }
-    
-
+   
 }
