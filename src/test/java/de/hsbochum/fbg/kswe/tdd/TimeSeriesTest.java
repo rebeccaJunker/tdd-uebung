@@ -14,6 +14,7 @@ public class TimeSeriesTest {
     
     @Test
     public void testStatistics() {
+        
         TimeSeries ts = new TimeSeries("waterGauge");
         ts.addObservation(new Observation(12.2, new DateTime("2017-06-06T12:00:00+01:00"), "m"));
         ts.addObservation(new Observation(1240, new DateTime("2017-06-06T12:30:00+01:00"), "cm"));

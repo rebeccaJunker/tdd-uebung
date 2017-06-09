@@ -5,6 +5,7 @@
  */
 package de.hsbochum.fbg.kswe.tdd;
 
+import de.hsbochum.fbg.kswe.tdd.Observation;
 import java.util.ArrayList;
 import java.util.List;
 
