@@ -52,6 +52,27 @@ GeometryFactory gf = new GeometryFactory();
 Point point = gf.createPoint(new Coordinate(12.0, 20.0));
 ```
 
-### Veröffentlichung
+## Teil 4: Verarbeitung von Bestellungen
+
+In diesem Teil soll die Logik der Klasse `OrderManager` realisiert werden.
+Es soll ein Test (--> `OrderManagerTest`) entwickelt werden, der folgende
+Funktionalität der Klasse sicherstellt:
+
+1. über eine Methode (z.B. `public void submitOrder(Order o)`) sollen neue
+Bestellungen in den Manager aufgenommen werden
+1. eine Methode (z.B. `List<Order> getQueuedOrders()`) soll die eingestellten
+(und noch nicht ausgeliefert) Bestellungen zurückgeben
+1. die Auslieferung der Bestellungen soll über eine Methode `void processOrders()`
+angestoßen werden und die Methode `void deliver(Product p, Customer c)` der
+Klasse `ProductDeliveryService` anstoßen
+1. nach Ausführung von `processOrders()` soll die Liste der noch nicht ausgelieferten
+Bestellungen wieder leer sein
+1. die Auslieferung der Bestellungen soll priorisiert durchgeführt werden (siehe
+  Methode `Order#getPriority()`)
+
+*Anmerkung: genau genommen wird hier kein Unit-Test mehr entwickelt, sondern ein
+Integrations-Test, da bestimmte Abläufe über ggf. mehrere Klassen getestet werden.*
+
+## Veröffentlichung
 
 Committe und Pushe Deine Ergebnisse in deinen GitHub-Fork
